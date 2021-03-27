@@ -1,0 +1,25 @@
+server:
+  port: 8885
+spring:
+  application:
+    name: jwt-service
+  h2:
+    console:
+      enabled: true
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+  zipkin:
+    base-url: http://localhost:9411/
+
+jwt:
+  token:
+    expirationTime: 60000000
+
+logging:
+  file:
+    name: E://springbootLogs//jwt-service.log
